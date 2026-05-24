@@ -1,0 +1,103 @@
+<svg viewBox="0 0 860 340" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, sans-serif">
+  <!-- Fondo -->
+  <rect width="860" height="340" fill="#f1f5f9" rx="12"/>
+
+  <!-- Header -->
+  <text x="24" y="38" font-size="18" font-weight="600" fill="#2563eb">🛍️ Gestión de Productos</text>
+  <text x="24" y="56" font-size="11" fill="#64748b">Módulo 1 · Unidad 3 — Angular Intermedio · Servicios</text>
+
+  <!-- Botón Nuevo Producto -->
+  <rect x="700" y="18" width="136" height="30" rx="8" fill="#2563eb"/>
+  <text x="768" y="38" font-size="12" font-weight="600" fill="white" text-anchor="middle">＋ Nuevo Producto</text>
+
+  <!-- Descuento control -->
+  <text x="570" y="38" font-size="11" fill="#64748b">Descuento global:</text>
+  <rect x="660" y="22" width="36" height="22" rx="6" fill="white" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="678" y="37" font-size="12" fill="#1e293b" text-anchor="middle">10</text>
+  <text x="700" y="38" font-size="12" font-weight="700" fill="#2563eb">%</text>
+
+  <!-- Tabla -->
+  <rect x="16" y="70" width="828" height="32" rx="4" fill="#2563eb"/>
+  <text x="28" y="91" font-size="10" font-weight="700" fill="white">#</text>
+  <text x="56" y="91" font-size="10" font-weight="700" fill="white">PRODUCTO</text>
+  <text x="220" y="91" font-size="10" font-weight="700" fill="white">CATEGORÍA</text>
+  <text x="340" y="91" font-size="10" font-weight="700" fill="white">PRECIO (CURRENCY)</text>
+  <text x="480" y="91" font-size="10" font-weight="700" fill="white">FECHA ALTA (DATE)</text>
+  <text x="600" y="91" font-size="10" font-weight="700" fill="white">PRECIO C/DESC. (DESCUENTO)</text>
+  <text x="790" y="91" font-size="10" font-weight="700" fill="white">ACCIÓN</text>
+
+  <!-- Filas -->
+  <!-- Fila 1 -->
+  <rect x="16" y="102" width="828" height="38" fill="white"/>
+  <text x="28" y="126" font-size="12" fill="#64748b" font-weight="600">1</text>
+  <text x="56" y="126" font-size="12" fill="#1e293b" font-weight="600">Laptop Pro 15"</text>
+  <rect x="220" y="112" width="80" height="18" rx="9" fill="#eff6ff"/>
+  <text x="260" y="125" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="middle">Electrónica</text>
+  <text x="340" y="126" font-size="12" fill="#1e293b" font-family="monospace">$1,299.99</text>
+  <text x="480" y="126" font-size="12" fill="#64748b">15/01/2024</text>
+  <text x="600" y="119" font-size="10" fill="#94a3b8" text-decoration="line-through">$1,299.99</text>
+  <text x="600" y="133" font-size="12" fill="#16a34a" font-weight="700" font-family="monospace">$1,169.99</text>
+  <rect x="790" y="112" width="48" height="18" rx="6" fill="#dc2626"/>
+  <text x="814" y="125" font-size="10" fill="white" font-weight="600" text-anchor="middle">Eliminar</text>
+
+  <!-- Fila 2 -->
+  <rect x="16" y="140" width="828" height="38" fill="#f8fafc"/>
+  <text x="28" y="164" font-size="12" fill="#64748b" font-weight="600">2</text>
+  <text x="56" y="164" font-size="12" fill="#1e293b" font-weight="600">Auriculares Bluetooth</text>
+  <rect x="220" y="150" width="72" height="18" rx="9" fill="#eff6ff"/>
+  <text x="256" y="163" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="middle">Accesorios</text>
+  <text x="340" y="164" font-size="12" fill="#1e293b" font-family="monospace">$89.99</text>
+  <text x="480" y="164" font-size="12" fill="#64748b">20/02/2024</text>
+  <text x="600" y="157" font-size="10" fill="#94a3b8" text-decoration="line-through">$89.99</text>
+  <text x="600" y="171" font-size="12" fill="#16a34a" font-weight="700" font-family="monospace">$80.99</text>
+  <rect x="790" y="150" width="48" height="18" rx="6" fill="#dc2626"/>
+  <text x="814" y="163" font-size="10" fill="white" font-weight="600" text-anchor="middle">Eliminar</text>
+
+  <!-- Fila 3 -->
+  <rect x="16" y="178" width="828" height="38" fill="white"/>
+  <text x="28" y="202" font-size="12" fill="#64748b" font-weight="600">3</text>
+  <text x="56" y="202" font-size="12" fill="#1e293b" font-weight="600">Teclado Mecánico RGB</text>
+  <rect x="220" y="188" width="70" height="18" rx="9" fill="#eff6ff"/>
+  <text x="255" y="201" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="middle">Periféricos</text>
+  <text x="340" y="202" font-size="12" fill="#1e293b" font-family="monospace">$149.99</text>
+  <text x="480" y="202" font-size="12" fill="#64748b">05/03/2024</text>
+  <text x="600" y="195" font-size="10" fill="#94a3b8" text-decoration="line-through">$149.99</text>
+  <text x="600" y="209" font-size="12" fill="#16a34a" font-weight="700" font-family="monospace">$134.99</text>
+  <rect x="790" y="188" width="48" height="18" rx="6" fill="#dc2626"/>
+  <text x="814" y="201" font-size="10" fill="white" font-weight="600" text-anchor="middle">Eliminar</text>
+
+  <!-- Fila 4 -->
+  <rect x="16" y="216" width="828" height="38" fill="#f8fafc"/>
+  <text x="28" y="240" font-size="12" fill="#64748b" font-weight="600">4</text>
+  <text x="56" y="240" font-size="12" fill="#1e293b" font-weight="600">Monitor 4K 27"</text>
+  <rect x="220" y="226" width="80" height="18" rx="9" fill="#eff6ff"/>
+  <text x="260" y="239" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="middle">Electrónica</text>
+  <text x="340" y="240" font-size="12" fill="#1e293b" font-family="monospace">$549.99</text>
+  <text x="480" y="240" font-size="12" fill="#64748b">18/03/2024</text>
+  <text x="600" y="233" font-size="10" fill="#94a3b8" text-decoration="line-through">$549.99</text>
+  <text x="600" y="247" font-size="12" fill="#16a34a" font-weight="700" font-family="monospace">$494.99</text>
+  <rect x="790" y="226" width="48" height="18" rx="6" fill="#dc2626"/>
+  <text x="814" y="239" font-size="10" fill="white" font-weight="600" text-anchor="middle">Eliminar</text>
+
+  <!-- Fila 5 -->
+  <rect x="16" y="254" width="828" height="38" fill="white"/>
+  <text x="28" y="278" font-size="12" fill="#64748b" font-weight="600">5</text>
+  <text x="56" y="278" font-size="12" fill="#1e293b" font-weight="600">Mouse Ergonómico</text>
+  <rect x="220" y="264" width="70" height="18" rx="9" fill="#eff6ff"/>
+  <text x="255" y="277" font-size="10" fill="#1d4ed8" font-weight="700" text-anchor="middle">Periféricos</text>
+  <text x="340" y="278" font-size="12" fill="#1e293b" font-family="monospace">$59.99</text>
+  <text x="480" y="278" font-size="12" fill="#64748b">01/04/2024</text>
+  <text x="600" y="271" font-size="10" fill="#94a3b8" text-decoration="line-through">$59.99</text>
+  <text x="600" y="285" font-size="12" fill="#16a34a" font-weight="700" font-family="monospace">$53.99</text>
+  <rect x="790" y="264" width="48" height="18" rx="6" fill="#dc2626"/>
+  <text x="814" y="277" font-size="10" fill="white" font-weight="600" text-anchor="middle">Eliminar</text>
+
+  <!-- Líneas separadoras tabla -->
+  <line x1="16" y1="140" x2="844" y2="140" stroke="#e2e8f0" stroke-width="0.5"/>
+  <line x1="16" y1="178" x2="844" y2="178" stroke="#e2e8f0" stroke-width="0.5"/>
+  <line x1="16" y1="216" x2="844" y2="216" stroke="#e2e8f0" stroke-width="0.5"/>
+  <line x1="16" y1="254" x2="844" y2="254" stroke="#e2e8f0" stroke-width="0.5"/>
+
+  <!-- Footer -->
+  <text x="836" y="318" font-size="11" fill="#64748b" text-anchor="end">Total de productos: <tspan font-weight="700" fill="#1e293b">5</tspan></text>
+</svg>
