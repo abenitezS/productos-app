@@ -4,7 +4,7 @@
   <header class="encabezado">
     <div class="encabezado-texto">
       <h1>🛍️ Gestión de Productos</h1>
-      <p class="subtitulo">Módulo 1 · Unidad 3 — Angular Intermedio · Servicios</p>
+
     </div>
     <div class="encabezado-acciones">
       <div class="descuento-control">
@@ -44,7 +44,7 @@
         />
       </div>
       <div class="form-group">
-        <label>Precio (USD)</label>
+        <label>Precio (ARS)</label>
         <input
           type="number"
           [(ngModel)]="nuevoPrecio"
@@ -103,7 +103,7 @@
 
           <!-- Pipe estándar: currency -->
           <td class="col-precio">
-            {{ producto.precio | currency:'USD':'symbol':'1.2-2' }}
+            {{ producto.precio | currency:'ARS':'symbol':'1.2-2' }}
           </td>
 
           <!-- Pipe estándar: date -->
@@ -114,10 +114,10 @@
           <!-- Pipe personalizado: descuento -->
           <td class="col-descuento">
             <span class="precio-original">
-              {{ producto.precio | currency:'USD':'symbol':'1.2-2' }}
+              {{ producto.precio | currency:'ARS':'symbol':'1.2-2' }}
             </span>
             <span class="precio-final">
-              {{ producto.precio | descuento:descuentoGlobal | currency:'USD':'symbol':'1.2-2' }}
+              {{ producto.precio | descuento:descuentoGlobal | currency:'ARS':'symbol':'1.2-2' }}
             </span>
             <span class="badge-descuento" *ngIf="descuentoGlobal > 0">
               -{{ descuentoGlobal }}%

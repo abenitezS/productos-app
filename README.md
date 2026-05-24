@@ -122,7 +122,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 1. Lista de productos cargada
 
-![Lista de productos cargada](./screenshots/01-lista-productos.svg)
+![Lista de productos cargada](./public/capturas/01-lista-productos.svg)
 
 > Se muestran los 5 productos del array simulado con todos los campos: nombre, categoría, precio, fecha de alta y precio con descuento. La lista se carga automáticamente mediante `ngOnInit` al iniciar el componente.
 
@@ -130,7 +130,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 2. Aplicación de pipes estándar (`currency` y `date`)
 
-![Pipes estándar currency y date](./screenshots/02-pipes-estandar.svg)
+![Pipes estándar currency y date](./public/capturas/02-pipes-estandar.svg)
 
 > El pipe `currency` formatea los precios en dólares estadounidenses con símbolo y 2 decimales (`$1,299.99`). El pipe `date` transforma los objetos `Date` al formato legible `dd/MM/yyyy`. Ambos pipes se aplican directamente en el template sin modificar el dato en el servicio.
 
@@ -138,7 +138,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 3. Pipe personalizado `descuento` en funcionamiento
 
-![Pipe personalizado descuento](./screenshots/03-pipe-descuento.svg)
+![Pipe personalizado descuento](./public/capturas/03-pipe-descuento.svg)
 
 > El pipe `descuento` recibe el precio del producto y un porcentaje como parámetro, y devuelve el precio final con el descuento aplicado. Se encadena con el pipe `currency` para mostrar el resultado formateado: `{{ producto.precio | descuento:descuentoGlobal | currency:'USD' }}`.
 
@@ -146,7 +146,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 4. Formulario al agregar/eliminar productos y lista vacía
 
-![Interacción: agregar, eliminar y lista vacía](./screenshots/04-formulario-interaccion.svg)
+![Interacción: agregar, eliminar y lista vacía](./public/capturas/04-formulario-interaccion.svg)
 
 > - **Agregar**: un formulario permite ingresar nombre, precio y categoría. Al guardar, el producto aparece al final de la lista con una confirmación visual.
 > - **Eliminar**: cada fila tiene un botón que llama a `deleteProducto(id)` en el servicio y refresca la vista.
