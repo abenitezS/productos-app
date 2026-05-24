@@ -160,7 +160,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 - **Curso:** Angular Intermedio
 - **Unidad:** Módulo 1 — Unidad 3: Gestión y visualización de datos con pipes
 
----
+--- 
 
 ## Bibliografía y fuentes
 
