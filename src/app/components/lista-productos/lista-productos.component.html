@@ -7,18 +7,7 @@
 
     </div>
     <div class="encabezado-acciones">
-      <div class="descuento-control">
-        <label for="descuentoInput">Descuento global:</label>
-        <input
-          id="descuentoInput"
-          type="number"
-          [(ngModel)]="descuentoGlobal"
-          min="0"
-          max="100"
-          class="input-descuento"
-        />
-        <span class="pct-label">%</span>
-      </div>
+      
       <button class="btn btn-primary" (click)="toggleFormulario()">
         {{ mostrarFormulario ? '✕ Cancelar' : '＋ Nuevo Producto' }}
       </button>
@@ -87,9 +76,9 @@
           <th>#</th>
           <th>Producto</th>
           <th>Categoría</th>
-          <th>Precio (currency)</th>
+          <th>Precio </th>
           <th>Fecha de alta (date)</th>
-          <th>Precio c/desc. (pipe descuento)</th>
+          <th>Precio Final </th>
           <th>Acción</th>
         </tr>
       </thead>
@@ -113,15 +102,29 @@
 
           <!-- Pipe personalizado: descuento -->
           <td class="col-descuento">
-            <span class="precio-original">
+            <span class="precio-final" *ngIf="producto.descuento <= 0">
               {{ producto.precio | currency:'ARS':'symbol':'1.2-2' }}
             </span>
-            <span class="precio-final">
-              {{ producto.precio | descuento:descuentoGlobal | currency:'ARS':'symbol':'1.2-2' }}
+            <span class="precio-final" *ngIf="producto.descuento > 0">
+              {{ producto.precio | descuento:producto.descuento | currency:'ARS':'symbol':'1.2-2' }}
             </span>
-            <span class="badge-descuento" *ngIf="descuentoGlobal > 0">
-              -{{ descuentoGlobal }}%
-            </span>
+
+
+  <!-- Input para ingresar descuento -->
+    <div class="descuento-control">
+            <label for="descuentoInput">Descuento %:</label>
+            <input
+              id="descuentoInput"
+              type="number"
+              [(ngModel)]="producto.descuento"
+              min="0"
+              max="100"
+              (input)="producto.descuento=limitarDescuento(producto.descuento)"
+              class="input-descuento"
+         
+            />
+      </div> 
+
           </td>
 
           <td>

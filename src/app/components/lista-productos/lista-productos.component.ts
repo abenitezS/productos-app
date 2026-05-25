@@ -15,12 +15,14 @@ import { DescuentoPipe } from '../../pipes/descuento.pipe';
 export class ListaProductosComponent implements OnInit {
 
   productos: Producto[] = [];
-  descuentoGlobal: number = 10;
+
 
   // Campos del formulario para agregar producto
   nuevoNombre: string = '';
   nuevoPrecio: number | null = null;
   nuevaCategoria: string = '';
+ nuevoDescuento: number  = 0;
+
 
   mostrarFormulario: boolean = false;
   mensajeExito: string = '';
@@ -39,6 +41,7 @@ export class ListaProductosComponent implements OnInit {
     this.productosService.addProducto({
       nombre: this.nuevoNombre.trim(),
       precio: this.nuevoPrecio,
+      descuento: this.nuevoDescuento || 0,
       categoria: this.nuevaCategoria.trim(),
       fechaAlta: new Date()
     });
@@ -63,4 +66,25 @@ export class ListaProductosComponent implements OnInit {
   toggleFormulario(): void {
     this.mostrarFormulario = !this.mostrarFormulario;
   }
+
+limitarDescuento(valor: number): number {
+
+    // Limitar a 3 dígitos
+  if (valor.toString().length > 3) {
+   return 0;
+    
+  }
+
+  if (valor > 100) {
+    return 100;
+  }
+
+  if (valor < 0) {
+    return 0;
+  }
+
+  return valor;
+
+}
+
 }
