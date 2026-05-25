@@ -122,7 +122,7 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 1. Lista de productos cargada
 
-![Lista de productos cargada](./public/capturas/01-lista-productos.svg)
+![Lista de productos cargada](./public/capturas/01-lista-productos.JPG)
 
 > Se muestran los 5 productos del array simulado con todos los campos: nombre, categoría, precio, fecha de alta y precio con descuento. La lista se carga automáticamente mediante `ngOnInit` al iniciar el componente.
 
@@ -130,17 +130,17 @@ Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
 
 ### 2. Aplicación de pipes estándar (`currency` y `date`)
 
-![Pipes estándar currency y date](./public/capturas/02-pipes-estandar.svg)
+![Pipes estándar currency y date](./public/capturas/02-pipes-estandar.JPG)
 
-> El pipe `currency` formatea los precios en dólares estadounidenses con símbolo y 2 decimales (`$1,299.99`). El pipe `date` transforma los objetos `Date` al formato legible `dd/MM/yyyy`. Ambos pipes se aplican directamente en el template sin modificar el dato en el servicio.
+> El pipe `currency` formatea los precios en pesos Argentinos con símbolo y 2 decimales (`$1,299.99`). El pipe `date` transforma los objetos `Date` al formato legible `dd/MM/yyyy`. Ambos pipes se aplican directamente en el template sin modificar el dato en el servicio.
 
 ---
 
 ### 3. Pipe personalizado `descuento` en funcionamiento
 
-![Pipe personalizado descuento](./public/capturas/03-pipe-descuento.svg)
+![Pipe personalizado descuento](./public/capturas/03-pipe-descuento.JPG)
 
-> El pipe `descuento` recibe el precio del producto y un porcentaje como parámetro, y devuelve el precio final con el descuento aplicado. Se encadena con el pipe `currency` para mostrar el resultado formateado: `{{ producto.precio | descuento:descuentoGlobal | currency:'USD' }}`.
+> El pipe `descuento` recibe el precio del producto y un porcentaje como parámetro, y devuelve el precio final con el descuento aplicado. Se encadena con el pipe `currency` para mostrar el resultado formateado: `  {{ producto.precio | descuento:producto.descuento }}`.
 
 ---
 

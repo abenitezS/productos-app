@@ -21,8 +21,7 @@ export class ProductosService {
       precio: 89.99,
       categoria: 'Accesorios',
       fechaAlta: new Date('2026-02-20'),
-
-      descuento: 0
+      descuento: 20
     },
     {
       id: 3,
