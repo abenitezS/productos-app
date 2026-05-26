@@ -18,37 +18,6 @@ Aplicación Angular **v19** que demuestra el uso de **servicios**, **inyección 
 
 ---
 
-## Estructura del proyecto
-
-```
-productos-app/
-├── public/                                  # Assets estáticos (Angular 19)
-├── screenshots/                             # Capturas de pantalla
-├── src/
-│   ├── app/
-│   │   ├── models/
-│   │   │   └── producto.model.ts            # Interfaz Producto
-│   │   ├── services/
-│   │   │   └── productos.service.ts         # getProductos, addProducto, deleteProducto
-│   │   ├── pipes/
-│   │   │   └── descuento.pipe.ts            # Pipe personalizado
-│   │   ├── components/
-│   │   │   └── lista-productos/
-│   │   │       ├── lista-productos.component.ts
-│   │   │       ├── lista-productos.component.html
-│   │   │       └── lista-productos.component.css
-│   │   ├── app.component.ts
-│   │   └── app.config.ts
-│   ├── index.html
-│   ├── main.ts
-│   └── styles.css
-├── angular.json
-├── package.json
-└── tsconfig.json
-```
-
----
-
 ## Detalles técnicos
 
 ### Servicio `ProductosService`
@@ -65,10 +34,9 @@ Generado con Angular CLI (`ng generate service services/productos`). Contiene:
 
 ```typescript
 // Uso en template:
-{{ producto.precio | descuento:20 | currency:'USD' }}
-// Aplica un 20% de descuento antes de formatear el precio
-```
+{{ producto.precio | descuento:producto.descuento | currency:'ARS' }}
 
+```
 ---
 
 ## Requisitos previos
@@ -77,7 +45,7 @@ Generado con Angular CLI (`ng generate service services/productos`). Contiene:
 - **Angular CLI** >= 19.x
 
 ```bash
-npm install -g @angular/cli@19
+npm install -g @angular/cli@21
 ```
 
 ---
@@ -94,13 +62,13 @@ cd productos-app
 ### 2. Instalar dependencias
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 ### 3. Ejecutar en modo desarrollo
 
 ```bash
-ng serve
+npm run start 
 ```
 
 Abrir en el navegador: [http://localhost:4200](http://localhost:4200)
