@@ -81,12 +81,16 @@
 
           <!-- Pipe personalizado: descuento -->
           <td class="col-descuento">
-            <span class="precio-final" *ngIf="producto.descuento <= 0">
-              {{ producto.precio | currency:'ARS':'symbol':'1.2-2' }}
-            </span>
-            <span class="precio-final" *ngIf="producto.descuento > 0">
-              {{ producto.precio | descuento:producto.descuento | currency:'ARS':'symbol':'1.2-2' }}
-            </span>
+            @if (producto.descuento <= 0) {
+              <span class="precio-final">
+                {{ producto.precio | currency:'ARS':'symbol':'1.2-2' }}
+              </span>
+            } @else {
+              <span class="precio-final">
+                {{ producto.precio | descuento:producto.descuento | currency:'ARS':'symbol':'1.2-2' }}
+              </span>
+            }
+          
             <!-- Input para ingresar descuento -->
             <div class="descuento-control">
               <label for="descuentoInput">Descuento %:</label>
@@ -109,8 +113,9 @@
   </div>
 
   <!-- Contador -->
+   @if (productos.length > 0) {
   <footer class="pie" *ngIf="productos.length > 0">
     Total de productos: <strong>{{ productos.length }}</strong>
   </footer>
-
+   }
 </div>
